@@ -3,7 +3,7 @@
 $primary-color: #e5e5e5;
 $secondary-color: #14213d;
 $tertiary-color: #fca311;
-$fourth-color: #f2f2f2;
+$fourth-color: #fff;
 
 $card-scale: 1;
 $hover-scale: 1.03;
@@ -137,7 +137,7 @@ button {
   width: 250px;
   height: 350px;
   background-color: white;
-  border-radius: 0.5em;
+  cursor: pointer;
 
   img {
     width: 200px;

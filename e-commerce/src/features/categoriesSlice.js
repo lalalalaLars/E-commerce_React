@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import api from "../services/api"; // Import your API module
+import api from "../services/api";
 
 const initialState = {
   categories: [],

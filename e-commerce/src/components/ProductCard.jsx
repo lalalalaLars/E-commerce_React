@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchProducts } from "../features/productSlice"; // Import the action to fetch products
+import { fetchProducts } from "../features/productSlice";
 
 const truncateString = (str, numWords) => {
   const words = str.split(" ");
@@ -14,13 +14,11 @@ const truncateString = (str, numWords) => {
 };
 
 const ProductCard = ({ selectedCategory }) => {
-  // Use useSelector to access the product state
   const products = useSelector((state) => state.products.products);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Dispatch the action to fetch products when the component mounts
     dispatch(fetchProducts());
   }, [dispatch]);
 

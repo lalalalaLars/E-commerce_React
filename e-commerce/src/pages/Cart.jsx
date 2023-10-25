@@ -6,13 +6,10 @@ import { removeFromCart } from "../features/cartSlice";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  const dispatch = useDispatch(); // Initialize dispatch
+  const dispatch = useDispatch();
 
   const handleRemoveProduct = (productId) => {
-    console.log("Cart state before removal:", cart);
-    // Dispatch the action to remove the product from the cart
     dispatch(removeFromCart(productId));
-    console.log("Cart state after removal:", cart);
   };
 
   const totalSum = cart.reduce(

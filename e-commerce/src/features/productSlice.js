@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import api from "../services/api"; // Import your API module
+import api from "../services/api";
 
 const initialState = {
   products: [],
@@ -32,7 +32,7 @@ export const fetchProducts = () => async (dispatch) => {
   dispatch(productsLoading());
 
   try {
-    const response = await api.get("/products"); // Replace with your API endpoint
+    const response = await api.get("/products");
     dispatch(productsSuccess(response.data));
   } catch (error) {
     dispatch(productsError("Failed to fetch products."));
